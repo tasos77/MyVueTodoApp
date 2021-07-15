@@ -20,8 +20,15 @@
   </thead>
   <tbody>
     <tr v-for="(task,index) in tasks" :key="index">
-      <td>{{task.name}}</td>
-      <td style="width: 120px"><span @click="changeStatus(index)" class="pointer">{{task.status}}</span></td>
+      <td>
+          <span :class="{'finished':task.status === 'finished'}">
+              {{task.name}}
+          </span>
+    </td>
+      <td style="width: 120px">
+          <span @click="changeStatus(index)" class="pointer">{{task.status}}
+          </span>
+      </td>
       <td>
           <div @click="editTask(index)" class="text-center">
             <span class="fa fa-pen"></span>
@@ -40,10 +47,6 @@
 
 <script>
 export default {
-    name: 'HelloWorld',
-    props:{
-        msg:String
-    },
     data() {
         return {
             task:'',
@@ -97,5 +100,8 @@ export default {
 <style scoped>
     .pointer{
         cursor: pointer;
+    }
+    .finished{
+        text-decoration: line-through;
     }
 </style>
