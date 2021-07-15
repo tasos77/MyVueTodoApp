@@ -9,7 +9,7 @@
         </div>
 
      <!-- Task Table -->
-     <table class="table table-bordered">
+     <table class="table table-bordered mt-5">
   <thead>
     <tr>
       <th scope="col">Task</th>
@@ -21,9 +21,9 @@
   <tbody>
     <tr>
       <th>Steal bananas from the store.</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>Momdo</td>
+      <td>To-do</td>
+      <td></td>
+      <td></td>
     </tr>
   </tbody>
 </table>
